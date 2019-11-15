@@ -1,0 +1,152 @@
+/*!
+ * StoCookie - cookie law notification and custom alerts
+ *
+ * Copyright 2016 Nicola Franchini
+ * http://www.veno.es/stocookie
+ *
+ * Licence: http://codecanyon.net/wiki/support/legal-terms/licensing-terms/
+ */
+
+.stocookie-message{
+  display: none;
+}
+
+.biscotto, .biscotto *,
+.biscotto:before, .biscotto *:before,
+.biscotto:after, .biscotto *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.biscotto{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: inherit;    
+  font-size: 12px;
+  z-index: 99998;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.biscotto.sc-fade{
+  opacity: 0;
+}
+.sc-animate{
+  webkit-transition: all 800ms;
+  transition: all 800ms;
+}
+.biscotto.sc-fade.on{
+  opacity: 1;
+}
+.biscotto.sc-top{
+  top: 0;
+}  
+.biscotto.sc-bottom{
+  bottom: 0;
+}
+
+.biscotto.sc-top.on, .biscotto.sc-top.sc-slide.on{
+  top: 0 !important;
+}  
+.biscotto.sc-bottom.on, .biscotto.sc-bottom.sc-slide.on{
+  bottom: 0 !important;
+}
+
+/* wp-admin bar */
+.admin-bar .biscotto.sc-top.on, .admin-bar .biscotto.sc-top.sc-slide.on{
+  top: 32px !important;
+}
+
+@media screen and (max-width: 782px) {
+.admin-bar .biscotto.sc-top.on, .admin-bar .biscotto.sc-top.sc-slide.on{
+    top: 46px !important;;
+  }
+}
+.admin-bar .biscotto{
+  max-height: 85%;
+}
+.biscotto.biscotto-full{
+  height: 100%;
+}
+.biscotto-inner{
+  max-height: 100%;
+  position: relative;
+  background: #fff;
+  background: rgba(255,255,255,0.9);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-box-shadow: 0 0 14px rgba(0,0,0,0.25), 0 6px 6px rgba(0,0,0,0.22);
+  box-shadow: 0 0 14px rgba(0,0,0,0.25), 0 6px 6px rgba(0,0,0,0.22);
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.biscotto-container{
+  width: 100%;
+  padding: 20px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.cook-message{
+  clear: both;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.biscotto .alignleft, .biscotto img.alignleft {
+    margin: 0.4em 1em 0.4em 0;
+}
+.biscotto .alignright, .biscotto img.alignright {
+    margin: 0.4em 0 0.4em 1em;
+}
+
+/*
+* small close button
+*/
+.biscotto-times{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+
+.biscotto-times:after{
+  display: inline-block;
+  content: "\00d7";
+}
+
+/*
+* Agree button
+*/
+.biscotto-agree{
+  clear: both;
+  margin: 0;
+}
+.close-biscotto{
+  cursor: pointer;
+  padding: 4px 20px;
+  color: #fff;
+  background: #333;
+  display: inline-block;
+  border: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  webkit-transition: all 200ms;
+  transition: all 200ms;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.close-biscotto:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
